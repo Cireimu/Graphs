@@ -66,15 +66,18 @@ class Graph:
         s.push(starting_vertex)
 
         visited = set()
-
+        path = []
         while s.size() > 0:
             v = s.pop()
 
             if v not in visited:
                 print(v)
                 visited.add(v)
+                path.append(v)
                 for next_v in self.get_neighbors(v):
                     s.push(next_v)
+                    
+        return path
 
     def dft_recursive(self, starting_vertex, visited=None):
         """
