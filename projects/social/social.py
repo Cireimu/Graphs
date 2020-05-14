@@ -37,10 +37,8 @@ class SocialGraph:
         """
         Takes a number of users and an average number of friendships
         as arguments
-
         Creates that number of users and a randomly distributed friendships
         between those users.
-
         The number of users must be greater than the average number of friendships.
         """
         # Reset graph
@@ -48,9 +46,6 @@ class SocialGraph:
         self.users = {}
         self.friendships = {}
         # !!!! IMPLEMENT ME
-        if num_users < avg_friendships:
-            print("Number of users must be greater than average num of friendships")
-            return
 
         # add users, with user name being based on num_users
         # generate friendship combinations
